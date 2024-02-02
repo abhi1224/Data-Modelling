@@ -25,7 +25,11 @@ const productSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref:'Category',
         required: true,
-    } // reference of category model
+    }, // reference of category model
+    owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    }, // reference of user model
    
 },{timestamps : true})
 
