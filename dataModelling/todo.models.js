@@ -9,7 +9,16 @@ const todoSchema = new mongoose({
             type:Boolean,
             default: false
         },
-        
+        createdBy: {
+            type : mongoose.Schema.Types.ObjectId, // this means we are going to give the reference of any other model
+            ref: 'User' // this is the reference of User model 
+        },
+        subTodos : [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: "subTodo"
+            },
+        ]
     
     },{timestamps : true})
 
