@@ -29,7 +29,6 @@ function App() {
             <h2>{joke.title}</h2>
             <p>{joke.content}</p>
           </div>
-
         ))
       }
     </>
